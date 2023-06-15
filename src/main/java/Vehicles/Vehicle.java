@@ -1,2 +1,7 @@
-package Vehicles;public interface Vehicle {
+package Vehicles;
+
+interface Vehicle {
+    void start();
+    void stop();
+    void drive(double kilometers);
 }
