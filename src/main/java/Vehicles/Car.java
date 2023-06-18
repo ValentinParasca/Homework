@@ -69,7 +69,8 @@ abstract class Car implements Vehicle {
     }
 
     private double calculateFuelConsumption(double kilometers) {
-        double consumptionPerKm = consumptionPer100Km * (tireSize / 15.0);
+        double consumptionPerKm = totalFuelConsumed / kilometers;
+        //consumptionPer100Km * (tireSize / 15.0)
 
         for (int gear = 1; gear < currentGear; gear++) {
             consumptionPerKm += (consumptionPer100Km * (gear - 1) * 0.02);
@@ -96,6 +97,6 @@ abstract class Car implements Vehicle {
         if (totalFuelConsumed == 0) {
             return 0;
         }else{
-        return (totalFuelConsumed / (float) (gears * 100)) * 100;}
+            return (totalFuelConsumed / (float) (gears * 100)) * 100;}
     }
 }
