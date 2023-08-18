@@ -3,7 +3,7 @@ package Testing;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MetricDistanceCalculator {
+public class DistanceCalculator {
     private static final Map<String, Integer> UNIT_CONVERSIONS = new HashMap<>();
     static {
         UNIT_CONVERSIONS.put("mm", 1);
@@ -18,7 +18,7 @@ public class MetricDistanceCalculator {
         String[] tokens = expression.split("\\s+");
 
         int value = 0;
-        int sign = 1; // 1 for addition, -1 for subtraction
+        int sign = 1;
         String unit = "";
 
         for (String token : tokens) {
